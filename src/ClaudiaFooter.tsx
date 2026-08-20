@@ -24,7 +24,8 @@ import { ConnectAIPanel } from '@jo51yon/claudia-connectors';
  * force into one shape here.
  */
 export interface ClaudiaFooterProps {
-  copyrightHolder: string;
+  /** Omit entirely if the project has no copyright/settings source (e.g. S3 Photobook today). */
+  copyrightHolder?: string;
   /** Rendered as-is inside the footer row -- each project's own real policy-link markup. */
   policyLinks?: ReactNode;
   mobileAppUrl?: string | null;
@@ -52,7 +53,7 @@ export default function ClaudiaFooter({
   return (
     <>
       <footer className="app-footer">
-        <span>\u00a9 {new Date().getFullYear()} {copyrightHolder}</span>
+        {copyrightHolder && <span>\u00a9 {new Date().getFullYear()} {copyrightHolder}</span>}
         {policyLinks}
         {showConnect && (
           <button type="button" className="footer-link" onClick={() => setConnectOpen((v) => !v)}>

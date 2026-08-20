@@ -4,6 +4,13 @@ Semantic versioning: MAJOR = a prop, exported type, or default behaviour changed
 could break an existing consumer without any code change on their side. MINOR = additive only.
 Consuming projects should pin to a tag (`#v1.0.0`), never `#main`.
 
+## v1.0.1 — 2026-08-20
+
+Additive. `copyrightHolder` made optional. Caught while migrating S3 Photobook itself, not in
+the abstract: it genuinely has no copyright/settings source at all (checked directly -- no
+such data exists anywhere in its codebase), and the prop being required would have forced a
+fake or empty value onto a project that has never shown one.
+
 ## v1.0.0 — 2026-08-20
 
 First release. `ClaudiaFooter` -- checked three real footer implementations (PETGI, Lintel,

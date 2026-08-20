@@ -1,12 +1,15 @@
 {
   "name": "@jo51yon/claudia-footer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claudia shared app footer (ClaudiaFooter) -- copyright chrome + the Connect-an-AI-assistant toggle/embed, extracted from real, confirmed duplication. See docs/_platform/component-library.md in the claudia repo.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build"
